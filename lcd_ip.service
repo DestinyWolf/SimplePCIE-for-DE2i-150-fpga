@@ -1,0 +1,17 @@
+[Unit]
+Description=Mostra IP no LCD da FPGA
+# Só inicia depois que a rede estiver online (importante para pegar o IP certo)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Substitua 'kake' pelo seu usuário do Linux
+User=root
+WorkingDirectory=/home/kake/fpga_driver/source
+ExecStart=/bin/bash /home/kake/fpga_driver/source/run_lcd_boot.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
