@@ -7,3 +7,8 @@ os arquivos contidos nesse repositorio podem ser utilizados por qualquer pessoa 
 >No presente momento a biblioteca e o module kenel(driver) foram feitos para trabalhar com o ioctl, o que diminui drasticamente o desempenho tendo em vista que a comunicação entre fpga e o processador intel ocorrem por meio de um baramento PCIe.
 
 Para futuras melhorias, acredito que adicição de uma forma do driver trabalhar com DMA (Direct Memory Access) seria um grande avanço tendo em vista que essa mudança permitiria trabalhar com mais taxa de transmissão de dados assim como a transmissão de blocos maiores de dados entre fpga e processador.
+
+>[!note]
+> foi adicionado scripts para inicialicação automatica dos drives, alem de dois arquivos em C++ para facilitar o teste da biblioteca alem da comunicação entre o intel Atom e a FPGA Cyclone IV.
+
+
